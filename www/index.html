@@ -75,12 +75,15 @@
         <svg id="chart"></svg>
     </section>
     <h2 class="h201">口座残高割合</h2>
-    <section id="graph02">
+    <!--<section id="graph02">
         <div>
             <canvas id="ratio_all"></canvas>
         </div>
+    </section>-->
+    <section id="graph02_ratio">
+        <p id="chart2_title"></p>
+        <div id="chart2"></div>
     </section>
-    <div id="chart2"></div>
   </ons-page>
 
   <ons-template id="delete.html">
@@ -125,27 +128,27 @@
   </ons-dialog>      
   </ons-template>
 
-<script src="js/d3.v3.min.js"></script>
-<script src="js/lineGraph.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.jqplot.min.js"></script>
-<script src="js/jqplot.pieRenderer.min.js"></script>
-  <script src="js/chart.bundle.js"></script>
-  <script src="js/chart.util.js"></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/lineGraph.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.jqplot.min.js"></script>
+  <script src="js/jqplot.pieRenderer.min.js"></script>
+  <!--<script src="js/chart.bundle.js"></script>-->
+  <!--<script src="js/chart.util.js"></script>-->
   <script src="js/pieGraph.js"></script>
   <script>
-        // グラフ用データ取得
-        var ratioConfig = getRatioData();
-
-        window.onload = function() {
-            // 口座残高割合グラフ表示
-            var ctxRatio = document.getElementById("ratio_all").getContext("2d");
-            window.myPie = new Chart(ctxRatio, ratioConfig);
-            // polar area chart
-            //var ctxRatio = document.getElementById("ratio_all");
-            //window.myPolarArea = Chart.PolarArea(ctxRatio, ratioConfig);
-        };
+//         // グラフ用データ取得
+//         var ratioConfig = getRatioData();
+// 
+//         window.onload = function() {
+//             // 口座残高割合グラフ表示
+//             var ctxRatio = document.getElementById("ratio_all").getContext("2d");
+//             window.myPie = new Chart(ctxRatio, ratioConfig);
+//             // polar area chart
+//             //var ctxRatio = document.getElementById("ratio_all");
+//             //window.myPolarArea = Chart.PolarArea(ctxRatio, ratioConfig);
+//         };
     </script>
 </body>
 </html>

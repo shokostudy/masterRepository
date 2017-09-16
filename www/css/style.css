@@ -37,6 +37,7 @@ div#label01, div#label02, div#label03, div#label04{
 
 span#span01, span#span02, span#span03, span#span04{
     font-size: 1.3rem;
+    text-decoration: underline;
 }
 
 span#span01{
@@ -111,9 +112,26 @@ svg {
 /*
 **円グラフ
 */
-section#graph02{
+
+/*section#graph02{
     width: 80%;
     margin: 0 auto 20px;
+}*/
+section#graph02_ratio{
+    width: 100%;
+    margin:0;
+}
+
+p#chart2_title{
+    font-size: 0.8rem;
+    line-height: 25px;
+    height: 25px;
+    color: #8e8e8e;
+    //text-shadow: 0 0 1px #ccc;
+    margin:0;
+    text-align: center;
+    /*text-decoration: underline;*/
+    font-weight: bolder;
 }
 
 /*
