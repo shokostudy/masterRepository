@@ -22,7 +22,8 @@ h2.h201{
 
 section#label_wrapper{
     width: 90%;
-    text-align: center;
+    margin:0 auto;
+    text-align: left;
 }
 
 div#label01, div#label02, div#label03, div#label04{

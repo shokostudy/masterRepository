@@ -22,7 +22,7 @@ function getRatioData(){
     }
     
     // タイトルを作成
-    var title = year + '年' + (month + 1) + '月　　合計：' + (dataSum * 1000) + '円';
+    var title = year + '/' + (month + 1) + '　　total：' + (dataSum * 1000) + '';
     
     
     var chartColors = window.chartColors;
@@ -54,7 +54,7 @@ function getRatioData(){
             title: {
                 display: true,
                 text: title,
-                fontSize:20
+                fontSize:14
             },
             tooltips: {
               callbacks: {
@@ -71,6 +71,7 @@ function getRatioData(){
             }
         }
     };
+    
     return configData;
 }
 
@@ -160,4 +161,31 @@ function getRatioData(){
 //     return configData;
 // }
 
-
+$(document).ready(function(){
+  plot2 = jQuery.jqplot('chart2', 
+    [[['A-bank', 500],['B-bank', 300], ['C-bank', 700], 
+    ['D-bank', 250]]], 
+    {
+    　seriesColors:['#ff9f40','#ffcd56','#4bc0c0','#36a2eb'],
+      title: '', 
+      seriesDefaults: {
+        shadow: false, 
+        renderer: jQuery.jqplot.PieRenderer, 
+        rendererOptions: { 
+          startAngle: 180, 
+          sliceMargin: 4, 
+          showDataLabels: true } 
+      }, 
+      legend: { show:true, location: 'e' },
+       // グラフ全体を囲むグリッドの設定    														
+        grid: {														
+            // グラフを囲む枠線の太さ、0で消える														
+            borderWidth: 0,														
+            // 背景色を透明に														
+            background: 'transparent',														
+            // 影もいらない														
+            shadow: false,														
+        }
+    }
+  );
+});
