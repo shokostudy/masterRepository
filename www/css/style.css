@@ -132,10 +132,11 @@ p#chart2_title{
     text-align: center;
     /*text-decoration: underline;*/
     font-weight: bolder;
+    text-decoration: underline;
 }
 
 /*
-**ダイアログ
+**データ入力ダイアログ
 */
 
 .alert-dialog-title{
@@ -162,6 +163,35 @@ section#dialog_section label{
 }
 
 #year, #month{
+    width: 100%;
+    display: inline-block;
+}
+
+/*
+**円グラフデータ年月選択ダイアログ
+*/
+
+.alert-dialog-title{
+    margin: 20px 10px 10px;
+}
+
+section#pie_dialog_section{
+    text-align: left;
+    padding: 0 20px;
+}
+
+section#pie_dialog_section label{
+    line-height: 1.0rem;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    color: #3b5998;
+    
+}
+
+#pie_year, #pie_month{
+    margin: 0 0 10px;
     width: 100%;
     display: inline-block;
 }

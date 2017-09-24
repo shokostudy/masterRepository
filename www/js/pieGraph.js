@@ -162,11 +162,42 @@
 // }
 
 // jqplot使用円グラフ作成
+
+    // 銀行名データを取得
+    var pieBanks = JSON.parse(localStorage.getItem("bankList"));
+    // 口座残高データを取得
+        var pieNowDate = new Date();
+        // 現在の年
+        var pieNowYear = nowDate.getFullYear();
+        // 現在の月
+        var pieNowMonth = nowDate.getMonth() + 1;
+        //  bank1
+        var pieBalances1 = JSON.parse(localStorage.getItem("balanceList1"));
+        var pieBalances1Data = pieBalances1[nowYear][pieNowMonth]['y'];
+        //  bank2
+        var pieBalances2 = JSON.parse(localStorage.getItem("balanceList2"));
+        var pieBalances2Data = pieBalances2[nowYear][pieNowMonth]['y'];
+        //  bank3
+        var pieBalances3 = JSON.parse(localStorage.getItem("balanceList3"));
+        var pieBalances3Data = pieBalances3[nowYear][pieNowMonth]['y'];
+        //  bank4
+        var pieBalances4 = JSON.parse(localStorage.getItem("balanceList4"));
+        var pieBalances4Data = pieBalances4[nowYear][pieNowMonth]['y'];
+        
+        var pieTotal = pieBalances1Data + pieBalances2Data + pieBalances3Data + pieBalances4Data;
+        
+    // 当月分データを作成
+    var pieData = [
+        [pieBanks.bank1, pieBalances1Data], 
+        [pieBanks.bank2, pieBalances2Data],
+        [pieBanks.bank3, pieBalances3Data],
+        [pieBanks.bank4, pieBalances4Data]
+    ];
+
     $(document).ready(function(){
         // グラフ作成
         plot2 = jQuery.jqplot('chart2', 
-        [[['A-bank', 500],['B-bank', 300], ['C-bank', 700], 
-        ['D-bank', 250]]], 
+        [pieData], 
         {
             seriesColors:['#ff9f40','#ffcd56','#4bc0c0','#36a2eb'],
             title: '', 
@@ -198,7 +229,7 @@
         // 現在の月// 
         var month_pie = now_pie.getMonth() + 1;
         // 円グラフタイトルを設定
-        document.getElementById("chart2_title").innerHTML = year_pie + '/' + month_pie + '　total : 17500000';
+        document.getElementById("chart2_title").innerHTML = year_pie + '/' + month_pie + '　total : ' + pieTotal;
 
     });
     

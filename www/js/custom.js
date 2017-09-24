@@ -1,7 +1,7 @@
 // 銀行名ラベルオブジェクト格納用
 var BANK_OBJ = "";
 
-// ダイアログ表示・非表示
+// データ入力ダイアログ表示・非表示
 function show(dlg, obj) {
   ons.createDialog(dlg).then(function(dialog) {
     dialog.show();
@@ -26,7 +26,7 @@ function show(dlg, obj) {
   });
 }
 
-// データダイアログCancel押下時
+// データ入力ダイアログCancel押下時
 function hideCancel(id) {
     document.getElementById(id).remove();
 };
@@ -84,4 +84,30 @@ function hideOK(id) {
     
 };
 
+// 円グラフデータ選択ダイアログ表示・非表示
+function pieShow(dlg, obj) {
+  ons.createDialog(dlg).then(function(dialog) {
+    dialog.show();
+    var pieDate = new Date();
+    var pieYear = pieDate.getFullYear();
+    var pieMonth = pieDate.getMonth();
+    document.getElementById("pie_year").value = pieYear;
+    document.getElementById("pie_month").value = pieMonth;
+  });
+}
 
+// 円グラフデータ選択ダイアログCancel押下時
+function pieHideCancel(id) {
+    document.getElementById(id).remove();
+};
+
+// 円グラフデータ選択ダイアログOK押下時
+function pieHideOK(id) {
+
+    // グラフ用データを更新
+
+    // グラフ更新
+    
+    document.getElementById(id).remove();
+    
+};

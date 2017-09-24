@@ -81,7 +81,7 @@
         </div>
     </section>-->
     <section id="graph02_ratio">
-        <p id="chart2_title"></p>
+        <p id="chart2_title" onclick="pieShow('pieDataSelect.html', this)"></p>
         <div id="chart2"></div>
     </section>
   </ons-page>
@@ -118,12 +118,49 @@
           <option value="11">12</option>
         </ons-select> 
         <label>balance</label>
-        <ons-input id="balance" modifier="underbar" placeholder="" value="" float></ons-input><br />
+        <ons-input id="balance" modifier="underbar" placeholder="" value="" type="number" float></ons-input><br />
       </section>
     </div>
     <div class="alert-dialog-footer">
       <button class="alert-dialog-button" onclick="hideCancel('dialog01');">Cancel</button>
       <button id="OKButton" class="alert-dialog-button" onclick="hideOK('dialog01');">OK</button>
+    </div>
+  </ons-dialog>      
+  </ons-template>
+  
+  <ons-template id="pieDataSelect.html">
+  <ons-dialog id="dialog02">
+
+    <div class="alert-dialog-title">円グラフデータ年月選択</div>
+    <div class="alert-dialog-content">
+      <section id="pie_dialog_section">
+        <label>year</label>
+        <ons-select id="pie_year">
+          <option value="2017">2017</option>
+<!--          <option value="2016">2016</option>
+          <option value="2015">2015</option>-->
+        </ons-select>
+        <label>month</label>
+        <!--<ons-input id="month" modifier="underbar" placeholder="" value="" float></ons-input>--><br />
+        <ons-select id="pie_month">
+          <option value="0">1</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+          <option value="4">5</option>
+          <option value="5">6</option>
+          <option value="6">7</option>
+          <option value="7">8</option>
+          <option value="8">9</option>
+          <option value="9">10</option>
+          <option value="10">11</option>
+          <option value="11">12</option>
+        </ons-select> 
+      </section>
+    </div>
+    <div class="alert-dialog-footer">
+      <button class="alert-dialog-button" onclick="pieHideCancel('dialog02');">Cancel</button>
+      <button id="pie_OKButton" class="alert-dialog-button" onclick="pieHideOK('dialog02');">OK</button>
     </div>
   </ons-dialog>      
   </ons-template>
