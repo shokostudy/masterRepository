@@ -146,7 +146,7 @@ function pieHideOK(id) {
             sliceMargin: 4, 
             showDataLabels: true } 
         }, 
-        legend: { show:true, location: 'se' },
+        legend: { show:false, location: 'se' },
         // グラフ全体を囲むグリッドの設定        													
         grid: {														
             // グラフを囲む枠線の太さ、0で消える														
@@ -161,6 +161,16 @@ function pieHideOK(id) {
     rePlot2.replot();
     // 円グラフタイトルを設定
     document.getElementById("chart2_title").innerHTML = pieSelectYear + '/' + pieSelectMonth + '　total : ' + pieSelectTotal;
+    // 円グラフラベル設定
+    document.getElementById("pie_bank01").innerHTML = pieBanks.bank1;
+    document.getElementById("pie_bank02").innerHTML = pieBanks.bank2;
+    document.getElementById("pie_bank03").innerHTML = pieBanks.bank3;
+    document.getElementById("pie_bank04").innerHTML = pieBanks.bank4;
+    // 円グラフデータ設定
+    document.getElementById("pie_value01").innerHTML = pieSelectBalances1Data;
+    document.getElementById("pie_value02").innerHTML = pieSelectBalances2Data;
+    document.getElementById("pie_value03").innerHTML = pieSelectBalances3Data;
+    document.getElementById("pie_value04").innerHTML = pieSelectBalances4Data;
     
     document.getElementById(id).remove();
     

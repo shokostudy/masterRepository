@@ -16,7 +16,7 @@
 
   <script>
     ons.ready(function() {
-      console.log("Onsen UI is ready!");
+      //console.log("Onsen UI is ready!");
       
       // 銀行名データ初期値
       var bankList = {
@@ -84,6 +84,25 @@
     <section id="graph02_ratio">
         <p id="chart2_title" onclick="pieShow('pieDataSelect.html', this)"></p>
         <div id="chart2"></div>
+        <section id="pie_label_wrapper">
+            <div id="pie_data01">
+                <div id="pie_label01"><span id="pie_span01">■</span><span id="pie_bank01"></span></div>
+                <div id="pie_value01"></div>            
+            </div>
+            <div id="pie_data02">
+                <div id="pie_label02"><span id="pie_span02">■</span><span id="pie_bank02"></span></div>
+                <div id="pie_value02"></div>            
+            </div>
+            <div id="pie_data03">
+                <div id="pie_label03"><span id="pie_span03">■</span><span id="pie_bank03"></span></div>
+                <div id="pie_value03"></div>            
+            </div>
+            <div id="pie_data04">
+                <div id="pie_label04"><span id="pie_span04">■</span><span id="pie_bank04"></span></div>
+                <div id="pie_value04"></div>            
+            </div>
+        </section>
+        <hr class="end" />
     </section>
   </ons-page>
 

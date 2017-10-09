@@ -209,7 +209,7 @@
                 sliceMargin: 4, 
                 showDataLabels: true } 
             }, 
-            legend: { show:true, location: 'se' },
+            legend: { show:false, location: 'se' },
             // グラフ全体を囲むグリッドの設定    														
             grid: {														
                 // グラフを囲む枠線の太さ、0で消える														
@@ -230,6 +230,16 @@
         var month_pie = now_pie.getMonth() + 1;
         // 円グラフタイトルを設定
         document.getElementById("chart2_title").innerHTML = year_pie + '/' + month_pie + '　total : ' + pieTotal;
+        // 円グラフラベル設定
+        document.getElementById("pie_bank01").innerHTML = pieBanks.bank1;
+        document.getElementById("pie_bank02").innerHTML = pieBanks.bank2;
+        document.getElementById("pie_bank03").innerHTML = pieBanks.bank3;
+        document.getElementById("pie_bank04").innerHTML = pieBanks.bank4;
+        // 円グラフデータ設定
+        document.getElementById("pie_value01").innerHTML = pieBalances1Data;
+        document.getElementById("pie_value02").innerHTML = pieBalances2Data;
+        document.getElementById("pie_value03").innerHTML = pieBalances3Data;
+        document.getElementById("pie_value04").innerHTML = pieBalances4Data;
 
     });
     

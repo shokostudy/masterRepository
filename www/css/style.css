@@ -28,6 +28,10 @@ h2.h201{
     margin:1px 0 10px;
 }
 
+/*
+**折れ線グラフ
+*/
+
 section#label_wrapper{
     width: 90%;
     margin:0 auto 20px;
@@ -68,14 +72,10 @@ span#span04{
 svg {
   width:100%;
 }
-
-/*
-**折れ線グラフ
-*/
  
 .grid .tick {
     stroke: lightgrey;
-	opacity: 0.7;
+    opacity: 0.7;
 	shape-rendering: crispEdges;
 }
  
@@ -129,6 +129,8 @@ svg {
 section#graph02_ratio{
     width: 100%;
     margin:0;
+    padding: 0;
+    text-align: center;
 }
 
 p#chart2_title{
@@ -138,10 +140,56 @@ p#chart2_title{
     color: #8e8e8e;
     //text-shadow: 0 0 1px #ccc;
     margin:0;
+    padding:0;
     text-align: center;
     /*text-decoration: underline;*/
     font-weight: bolder;
     text-decoration: underline;
+}
+
+div#chart2{
+    margin: 0;
+    padding: 0;
+}
+
+section#pie_label_wrapper{
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+}
+
+div#pie_data01, div#pie_data02, div#pie_data03, div#pie_data04{
+    width: 25%;
+    float: left;
+    line-height: 1.0rem;
+    display: inline-block;
+    margin: 0 0 5px;
+    font-size: 0.8rem;
+}
+
+span#pie_span01, span#pie_span02, span#pie_span03, span#pie_span04{
+    font-size: 1.3rem; 
+    margin-right: 3px;
+}
+
+span#pie_span01{
+    color: rgb(255, 159, 64);
+}
+
+span#pie_span02{
+    color: rgb(255, 205, 86);
+}
+
+span#pie_span03{
+    color: rgb(75, 192, 192);
+}
+
+span#pie_span04{
+    color: rgb(54, 162, 235);
+}
+
+div#pie_value01, div#pie_value02, div#pie_value03, div#pie_value04{
+    text-indent: 1.3rem;
 }
 
 /*
